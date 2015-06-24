@@ -4,9 +4,33 @@
 	<title>Calculator</title>
 </head>
 <body>
-	<h1>Calculator</h1>
-	<button onclick="myFunction()">Add 1 + 1</button>
+	<h1>Kev's Calc</h1>
 
+	<div id="calc" title="Try using your numpad for calculations">
+		<div id="top">
+			<span class="clear" onclick="myFunction('clear')">Clear</span>
+			<div id="output"></div>
+		</div>
+		<div id="buttons">
+			<!-- operators and other keys -->
+			<span onclick="myFunction(7)">7</span>
+			<span onclick="myFunction(8)">8</span>
+			<span onclick="myFunction(9)">9</span>
+			<span class="operator" onclick="myFunction('+')">+</span>
+			<span onclick="myFunction(4)">4</span>
+			<span onclick="myFunction(5)">5</span>
+			<span onclick="myFunction(6)">6</span>
+			<span class="operator" onclick="myFunction('-')">-</span>
+			<span onclick="myFunction(1)">1</span>
+			<span onclick="myFunction(2)">2</span>
+			<span onclick="myFunction(3)">3</span>
+			<span class="operator" onclick="myFunction('/')">/</span>
+			<span onclick="myFunction(0)">0</span>
+			<span onclick="myFunction('.')">.</span>
+			<span class="eval" onclick="myFunction('=')">=</span>
+			<span class="operator" onclick="myFunction('*')">x</span>
+		</div>
+	</div>
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="calculator.js"></script>

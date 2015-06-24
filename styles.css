@@ -1,0 +1,145 @@
+h1{
+	text-align: center;
+	font-size: 50px;
+	margin-top: 30px;
+	color: #8E001C;
+}
+
+#calc{
+	width: 307px;
+  	margin: 50px auto;
+  	padding-left: 10px;
+  	background: linear-gradient(#D3CEAA, #E7E8D1);
+	border-radius: 3px;
+	box-shadow: 5px 5px 2.5px #424242;
+}
+
+#top{
+	margin-top: 10px;
+	display: inline-block;
+	text-align: right;
+}
+
+#buttons{
+	clear: both;
+	display: inline-block;
+}
+
+#output{
+	width: 212px;
+	height: 40px;
+	background-color: #424242;
+	float: right;
+	color: white;
+	padding-top: 5px;
+	padding-right: 5px;
+	font-size: 25px;
+	border-radius: 3px;
+}
+
+
+
+/* Basic reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+	/* Better text styling */
+	font: bold 14px Arial, sans-serif;
+}
+
+/* Finally adding some IE9 fallbacks for gradients to finish things up */
+
+/* A nice BG gradient */
+html {
+	height: 100%;
+	background-image: url('thinker.jpg');
+	background-size: cover;
+}
+
+/* Clear floats */
+#buttons, #top {overflow: hidden;}
+
+/* Applying same to the keys */
+#buttons span, #top span.clear {
+	float: left;
+	position: relative;
+	top: 0;
+	
+	cursor: pointer;
+	
+	width: 66px;
+	height: 36px;
+	
+	background: white;
+	border-radius: 3px;
+	
+	margin: 0 7px 11px 0;
+	
+	color: #888;
+	line-height: 36px;
+	text-align: center;
+	
+	/* prevent selection of text inside keys */
+	user-select: none;
+	
+	/* Smoothing out hover and active states using css3 transitions */
+	transition: all 0.2s ease;
+}
+
+/* Remove right margins from operator keys */
+/* style different type of keys (operators/evaluate/clear) differently */
+#buttons span.operator {
+	background: #8E001C;
+	color: white;
+	margin-right: 0;
+}
+
+#buttons span.eval {
+	background: #8E001C;
+	color: white;
+}
+
+#top span.clear {
+	background: #5CADFF;
+	color: white;
+}
+
+/* Some hover effects */
+#buttons span.operator:hover {
+	background: #424242;
+	color: white;
+	margin-right: 0;
+}
+
+#buttons span:hover {
+	background: #424242;
+	color: white;
+}
+
+#buttons span.eval:hover {
+	background: #424242;
+	color: #ffffff;
+}
+
+#top span.clear:hover {
+	background: #539CE6;
+	color: white;
+}
+
+/* Simulating "pressed" effect on active state of the keys by removing the box-shadow and moving the keys down a bit */
+/*#buttons span:active {
+	box-shadow: 0px 0px #6b54d3;
+	top: 4px;
+}
+
+#buttons span.eval:active {
+	box-shadow: 0px 0px #717a33;
+	top: 4px;
+}
+
+#top span.clear:active {
+	top: 4px;
+	box-shadow: 0px 0px #007ACC;
+}*/
